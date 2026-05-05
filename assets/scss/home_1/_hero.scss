@@ -1,0 +1,248 @@
+.bd-hero1-sec {
+	z-index: 1;
+	.bd-hero-bg {
+		top: 0;
+		left: 0;
+		opacity: .5;
+		z-index: -1;
+		max-height: 653px;
+		@media #{$md,$sm,$xs,$xxs} {
+			max-height: 100%;
+		}
+	}
+}
+
+.bd-hero1-content {
+	gap: 40px;
+	padding-top: 230px;
+	justify-content: space-between;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		padding-top: 180px;
+	}
+}
+
+.bd-hero1-text {
+	max-width: 760px;
+	.hero-slug {
+		font-size: 18px;
+		font-weight: 500;
+		padding-bottom: 10px;
+		font-family: var(--bd-heading);
+	}
+	.hero-title {
+		line-height: 1;
+		font-size: 60px;
+		font-weight: 500;
+		position: relative;
+		margin-bottom: 18px;
+		padding-bottom: 24px;
+		letter-spacing: -.5px;
+		@media #{$lg,$sm} {
+			font-size: 40px;
+		}
+		@media #{$xs} {
+			font-size: 38px;
+		}
+		@media #{$xxs} {
+			font-size: 36px;
+		}
+		&:before {
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			content: '';
+			height: 1.6px;
+			position: absolute;
+			background-color: #CCCCCC;
+		}
+		&:after {
+			left: 0px;
+			height: 3px;
+			bottom: -1px;
+			content: '';
+			width: 126px;
+			position: absolute;
+			background-color: var(--bd-prime-c);
+		}
+	}
+	p {
+		font-size: 18px;
+	}
+	.hero-btn-grp {
+		gap: 12px;
+		.bd-btn1 {
+			&:nth-child(2) {
+				a {
+					background-color: var(--bd-title-color);
+					i {
+						background-color: var(--bd-prime-c);
+					}
+				}
+			}
+		}
+	}
+}
+
+.bd-hero1-form {
+	z-index: 2;
+	width: 100%;
+	max-width: 600px;
+	position: relative;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+		margin-bottom: 40px;
+	}
+	.item-title {
+		padding: 40px 35px;
+		text-align: center;
+		background-color: var(--bd-prime-c);
+		h3 {
+			color: #fff;
+			font-size: 32px;
+			font-weight: 500;
+		}
+		p {
+			color: #fff;
+			font-size: 18px;
+		}
+	}
+	.item-form {
+		padding: 40px;
+		background-color: #191919;
+		.row {
+			--bs-gutter-x: 12px;
+		}
+		.item-input {
+			margin-bottom: 20px;
+			span {
+				color: #fff;
+				display: block;
+				font-size: 16px;
+				padding-bottom: 10px;
+			}
+			input,textarea,select {
+				width: 100%;
+				height: 50px;
+				color: #E0E0E0;
+				font-size: 16px;
+				appearance: none;
+				padding-left: 16px;
+				border: 1px solid #484848;
+				background-color: transparent;
+				transition: all 500ms ease-in-out;
+				&:focus {
+					border: 1px solid var(--bd-prime-c);	
+				}
+				&:placeholder {
+					opacity: .6;
+					color: #E0E0E0;
+					font-size: 16px;
+				}
+			}
+			textarea {
+				height: 158px;
+				padding-top: 16px;
+			}
+		}
+		.selective-item {
+			position: relative;
+			&:before {
+				top: 10px;
+				right: 15px; 
+				font-size: 20px;
+				content: '\f0d7';
+				font-weight: 700;
+				position: absolute;
+				color: var(--bd-prime-c);
+				font-family: "Font Awesome 5 free";
+			}
+		}
+		button {
+			width: 100%;
+			border: none;
+			display: flex;
+			color: #0D0D0D;
+			font-size: 18px;
+			font-weight: 500;
+			align-items: center;
+			background-color: #fff;
+			padding: 6px 6px 6px 20px;
+			justify-content: space-between;
+			i {
+				width: 44px;
+				height: 44px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: var(--bd-prime-c);
+				img {
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+}
+.bd-hero1-img-slider {
+	margin-top: -288px;
+	@media #{$md,$sm,$xs,$xxs} {
+		margin-top: 0;
+	}
+}
+.bd-hr1-s-img {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		height: 480px;
+	}
+}
+.bd-hero-text-marquee {
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	display: flow-root;
+	position: absolute;
+	padding: 18px 0px 15px;
+	background-color: var(--bd-prime-c);
+	h3 {
+		color: #fff;
+		font-size: 28px;
+		font-weight: 500;
+		display: inline-block;
+	}
+	i {
+		top: -5px;
+		margin: 0px 12px;
+		position: relative;
+		display: inline-block;
+	}
+}
+
+.bd-hr1-nav {
+	top: -30px;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 72px;
+	position: absolute;
+	.bd-hr1-next,
+	.bd-hr1-prev {
+		width: 72px;
+		height: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		&:is(.active) {
+			background-color: var(--bd-prime-c);
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+	.bd-hr1-next {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+}

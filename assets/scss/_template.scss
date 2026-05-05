@@ -1,0 +1,25 @@
+/*=========
+Font load
+===========*/
+:root {
+	--bd-body-color: #5B5B5B;
+	--bd-title-color: #191919;
+	--bd-heading: 'Clash Grotesk', sans-serif;
+	--bd-body-font: 'Satoshi', sans-serif;
+	--bd-prime-c: #ED5518;
+	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
+	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
+	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+// Responsive Variables
+$over:'(min-width: 1800px)';
+$xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
+$xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$xs:'only screen and (min-width: 481px) and (max-width: 575px)';
+$xxs:'(max-width: 480px)';
+$xxxs:'(max-width: 360px)';
