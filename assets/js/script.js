@@ -154,8 +154,54 @@ Last change:    00/00/00
 			}, 700);
 		})		
 	});
-	
 
+
+	if ($('.bd-why-c-slider').length > 0 ) {
+		var slider = new Swiper('.bd-why-c-slider', {
+			spaceBetween: 0,
+			slidesPerView: 3,
+			loop: true,
+			speed: 1000,
+			navigation: {
+				nextEl: ".bd-wc-right",
+				prevEl: ".bd-wc-left",
+			},
+			breakpoints: {
+				'1400': {
+					slidesPerView: 3,
+				},
+				'1200': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'576': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				'480': {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				'0': {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+			},
+		});
+	};
+	
+	if ($('.bd-testi1-slide').length > 0 ) {
+		var slider = new Swiper('.bd-testi1-slide', {
+			spaceBetween: 0,
+			slidesPerView: 1,
+			loop: true,
+			speed: 1000,
+			pagination: {
+				el: ".bd-testi1-pagi",
+				clickable: true,
+			},
+		});
+	}; 
 
 
 
