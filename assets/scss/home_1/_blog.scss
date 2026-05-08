@@ -1,4 +1,6 @@
 .bd-blog1-top {
+	gap: 15px;
+	flex-wrap: wrap;
 	.bd-sec-title {
 		max-width: 500px;
 	}
@@ -11,6 +13,18 @@
 	gap: 32px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$lg,$md} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$sm,$xs,$xxs} {
+		grid-template-columns: 1fr;
+	}
+
+}
+
+.bd-blog1-item {
+	margin: 0 auto;
+	max-width: 499px;
 	.item-date {
 		top: 12px;
 		right: 7px;
@@ -100,5 +114,5 @@
 			position: absolute;
 			background-color: var(--bd-prime-c);
 		}
-	}
+	} 
 }

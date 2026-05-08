@@ -248,9 +248,30 @@ a {
 	display: inline-block;
 	a {
 		gap: 16px;
+		z-index: 1;
 		color: #fff;
+		overflow: hidden;
+		position: relative;
 		padding: 6px 6px 6px 16px;
 		background-color: var(--bd-prime-c);
+		&:before {
+			top: 6px;
+			left: 6px;
+			z-index: -1;
+			width: 0%;
+			content: '';
+			height: 40px;
+			position: absolute;
+			transition: all 400ms ease-in-out;
+			background-color: var(--bd-title-color);
+		}
+		.icon_1 {
+			top: 6px;
+			left: 0px;
+			opacity: 0;
+			z-index: -1;
+			position: absolute;
+		}
 		span {
 			white-space: nowrap;
 		}
@@ -261,8 +282,24 @@ a {
 			align-items: center;
 			justify-content: center;
 			background-color: var(--bd-title-color);
+			transition: all 400ms ease-in-out;
 			@media #{$lg} {
 				width: 35px;
+			}
+		}
+		&:hover {
+			&:before {
+				width: 94%;
+			}
+			span {
+				transform: translateX(30px);
+			}
+			.icon_1 {
+				left: 6px;
+				opacity: 1;
+			}
+			.icon_2 {
+				transform: translateX(50px);
 			}
 		}
 	}

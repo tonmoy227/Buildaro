@@ -9,6 +9,9 @@
 	gap: 40px;
 	display: flex;
 	justify-content: space-between;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 }
 
 .bd-ftr1-widget {
@@ -105,6 +108,15 @@
 	display: grid;
 	max-width: 785px;
 	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	@media #{$sm,$xs,$xxs} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$xxs} {
+		grid-template-columns: 1fr;
+	}
 }
 
 .bd-ftr1-wrap {
@@ -116,6 +128,9 @@
 	.bd-ftr1-shape2 {
 		right: 0;
 		bottom: 0;
+		@media #{$sm,$xs,$xxs} {
+			display: none;
+		}
 	}
 }
 

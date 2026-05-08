@@ -14,7 +14,20 @@
 		justify-content: start !important;
 	}
 }
-
+@keyframes icon-bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+	60% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
 .bd-why-c1-content {
 	z-index: 1;
 	padding: 80px;
@@ -95,6 +108,13 @@
 		p {
 			color: #5B5B5B;
 			font-size: 16px;
+		}
+	}
+	&:hover {
+		.item-icon {
+			i {
+				animation: icon-bounce 0.8s ease-out infinite;
+			}
 		}
 	}
 }

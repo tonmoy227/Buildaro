@@ -23,3 +23,30 @@ $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
 $xs:'only screen and (min-width: 481px) and (max-width: 575px)';
 $xxs:'(max-width: 480px)';
 $xxxs:'(max-width: 360px)';
+
+@keyframes shake {
+	0%   { transform: translateX(0); }
+	20%  { transform: translateX(-2px); }
+	40%  { transform: translateX(2px); }
+	60%  { transform: translateX(-2px); }
+	80%  { transform: translateX(2px); }
+	100% { transform: translateX(0); }
+}
+@keyframes slideInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(250px);
+		-ms-transform: translateY(250px);
+		transform: translateY(250px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+} 
+.slideInUp {
+	-webkit-animation-name: slideInUp;
+	animation-name: slideInUp;
+}

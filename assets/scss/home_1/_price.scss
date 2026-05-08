@@ -81,6 +81,12 @@
 	gap: 24px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$lg,$md} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$sm,$xs,$xxs} {
+		grid-template-columns: 1fr;
+	}
 }
 
 .bd-price1-item {
@@ -118,6 +124,8 @@
 			}
 		}
 		a {
+			gap: 15px;
+			flex-wrap: wrap;
 			padding: 6px 6px 6px 24px;
 			background-color: var(--bd-prime-c);
 			span {
@@ -165,7 +173,9 @@
 		}
 		.item-btn {
 			a {
+				gap: 15px;
 				color: #fff;
+				flex-wrap: wrap;
 				padding: 6px 6px 6px 20px;
 				border: 1px solid #2D2D2D;
 				span {
@@ -178,9 +188,16 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					transition: all 300ms ease-in-out;
 					background-color: var(--bd-prime-c);
 					img {
 						transform: rotate(45deg);
+					}
+				}
+				&:hover {
+					background-color: var(--bd-prime-c);
+					i {
+						background-color: var(--bd-title-color);
 					}
 				}
 			}
