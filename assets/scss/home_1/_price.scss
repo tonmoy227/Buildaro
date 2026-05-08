@@ -126,6 +126,7 @@
 		a {
 			gap: 15px;
 			flex-wrap: wrap;
+			overflow: hidden;
 			padding: 6px 6px 6px 24px;
 			background-color: var(--bd-prime-c);
 			span {
@@ -141,6 +142,11 @@
 				align-items: center;
 				justify-content: center;
 				background-color: var(--bd-title-color);
+			}
+			&:hover {
+				i {
+					animation: icon-bounce 0.8s ease-out infinite;
+				}
 			}
 		}
 	}

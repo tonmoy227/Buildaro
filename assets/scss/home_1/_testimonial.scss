@@ -100,8 +100,12 @@
 .bd-testi1-item {
 	.item-text {
 		gap: 44px;
+		opacity: 0;
+		visibility: hidden;
 		padding-left: 40px;
 		padding-bottom: 95px;
+		transform: translateY(60px);
+		transition: 1200ms var(--cube-1);
 		@media #{$xs,$xxs} {
 			gap: 30px;
 			flex-wrap: wrap;
@@ -120,14 +124,21 @@
 	.item-author {
 		gap: 16px;
 		padding: 40px;
-		border-top: 1px solid rgba(91, 91, 91, .20);
 		.item-img {
+			opacity: 0;
 			width: 60px;
 			height: 60px;
 			overflow: hidden;
-			
+			visibility: hidden;
+			transform: translateX(60px);
+			transition: 1200ms var(--cube-1);
+			border-top: 1px solid rgba(91, 91, 91, .20);
 		}
 		.auth-text {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(60px);
+			transition: 1200ms var(--cube-1);
 			h3 {
 				color: #000000;
 				font-size: 24px;
@@ -165,3 +176,20 @@
 	}
 }
 
+.swiper-slide-active {
+	.bd-testi1-item {
+		.item-text {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0px);
+		}
+		.item-author {
+			.item-img,
+			.auth-text { 
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0px);
+			}
+		}
+	}
+}

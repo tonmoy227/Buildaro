@@ -27,6 +27,7 @@
 	margin-bottom: 40px;
 	padding: 16px 16px 24px;
 	background-color: #EDEFED;
+	transition: all 500ms ease-in-out;
 	.item-text-social {
 		gap: 10px 15px;
 		margin-top: 24px;
@@ -46,6 +47,10 @@
 				align-items: center;
 				background-color: #fff;
 				justify-content: center;
+				&:hover {
+					color: #fff;
+					background-color: var(--bd-prime-c);
+				}
 			}
 		}
 	}
@@ -56,7 +61,34 @@
 			line-height: 1;
 			font-size: 18px;
 		}
+		a {
+			svg {
+				path {
+					transition: all 400ms ease-in-out;
+				}
+			}
+		}
 	} 
+	&:hover {
+		background-color: #191919;
+		.item-text-social {
+			h3 {
+				color: #fff;
+			}
+		}
+		.item-degi { 
+			span {
+				color: #E0E0E0;
+			}
+			a {
+				svg {
+					path {
+						fill: var(--bd-prime-c);
+					}
+				}
+			}
+		}
+	}
 }
 
 .bd-team1-stick-item {
@@ -82,3 +114,4 @@
 		}
 	}
 }
+

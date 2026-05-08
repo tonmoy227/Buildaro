@@ -195,8 +195,8 @@ Last change:    00/00/00
 						});
 					});
 				}
-				if ($('.pg_h2_slider_active').length > 0 ) {
-					var slider = new Swiper('.pg_h2_slider_active', {
+				if ($('.bd-hr1-img-slide').length > 0 ) {
+					var slider = new Swiper('.bd-hr1-img-slide', {
 						spaceBetween: 0,
 						slidesPerView: 1,
 						loop: true,
@@ -233,11 +233,6 @@ Last change:    00/00/00
 			slidesPerView: 1,
 			loop: true,
 			effect: "fade",
-
-			autoplay: {
-				delay: 4000,
-				disableOnInteraction: false,
-			},
 			speed: 1000,
 			navigation: {
 				nextEl: ".bd-pr-next",
@@ -285,6 +280,7 @@ Last change:    00/00/00
 		var slider = new Swiper('.bd-testi1-slide', {
 			spaceBetween: 0,
 			slidesPerView: 1,
+			effect: "fade",
 			loop: true,
 			speed: 1000,
 			pagination: {
@@ -417,6 +413,25 @@ Last change:    00/00/00
 		.from(el, { opacity: 0,  y: "+=150"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
 	});
 
+
+	gsap.utils.toArray(' .bottom_view2').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 2,
+				start: "top 100%",
+				end: "top 95%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0,  y: "+=150"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
+	});
+
+
 	$('.ax_item_active').on('mouseover', function () {
 		var $group = $(this).closest('[data-nx-group]');
 		$group.find('.ax_item_active').removeClass('active');
@@ -472,5 +487,23 @@ Last change:    00/00/00
 			ease: "none",
 		}); 
 	});
+
+
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var Testi_pin = document.querySelectorAll(".bd-team1-stick-item")
+		Testi_pin.forEach((item) => {
+			gsap.to(item, {
+				scrollTrigger: {
+					trigger: item,
+					markers: false,
+					pin: true,
+					pinSpacing: false,
+					start: "top 10%",
+					end: "bottom 55%",
+				},
+			});
+		});
+	}
+
 
 })(jQuery);

@@ -211,8 +211,19 @@
 	}
 }
 .bd-hr1-s-img {
+	img {
+		transform: scale(1.2);
+		transition: all 1500ms ease-in-out;
+	}
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		height: 480px;
+	}
+}
+.swiper-slide-active {
+	.bd-hr1-s-img {
+		img {
+			transform: scale(1);
+		}
 	}
 }
 .bd-hero-text-marquee {

@@ -25,6 +25,11 @@
 .bd-blog1-item {
 	margin: 0 auto;
 	max-width: 499px;
+	.item-img {
+		img {
+			transition: all 500ms ease-in-out;
+		}
+	}
 	.item-date {
 		top: 12px;
 		right: 7px;
@@ -75,6 +80,9 @@
 		position: relative;
 		margin-bottom: 15px;
 		padding-bottom: 13px;
+		&:hover {
+			color: var(--bd-prime-c);
+		}
 		&:before {
 			left: 0;
 			bottom: 0;
@@ -105,6 +113,23 @@
 		padding-bottom: 5px;
 		color: var(--bd-title-color);
 		font-family: var(--bd-heading);
+		i {
+			svg {
+				path {
+					transition: all 500ms ease-in-out;
+				}
+			}
+		}
+		&:hover {
+			color: var(--bd-prime-c);
+			i {
+				svg {
+					path {
+						fill: var(--bd-prime-c);
+					}
+				}
+			}
+		}
 		&:before {
 			left: 0;
 			bottom: 0;
@@ -113,6 +138,13 @@
 			content: '';
 			position: absolute;
 			background-color: var(--bd-prime-c);
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				filter: grayscale(1);
+			}
 		}
 	} 
 }

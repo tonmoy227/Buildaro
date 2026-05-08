@@ -306,11 +306,11 @@
 					color: #fff;
 					overflow: hidden;
 					position: relative;
-					padding: 6px 6px 6px 16px;
+					padding: 4px 4px 4px 14px;
 					background-color: var(--bd-prime-c);
 					&:before {
-						top: 6px;
-						left: 6px;
+						top: 4px;
+						left: 4px;
 						z-index: -1;
 						width: 0%;
 						content: '';
@@ -320,7 +320,7 @@
 						background-color: var(--bd-title-color);
 					}
 					.icon_1 {
-						top: 6px;
+						top: 4px;
 						left: 0px;
 						opacity: 0;
 						z-index: -1;
