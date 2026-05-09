@@ -26,8 +26,9 @@
 	margin: 0 auto;
 	max-width: 499px;
 	.item-img {
+		overflow: hidden;
 		img {
-			transition: all 500ms ease-in-out;
+			transition: 1000ms cubic-bezier(0.73, 1.29, 0.5, -0.33);
 		}
 	}
 	.item-date {
@@ -144,6 +145,7 @@
 		.item-img {
 			img {
 				filter: grayscale(1);
+				transform: scale(1.1);
 			}
 		}
 	} 

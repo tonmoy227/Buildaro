@@ -308,9 +308,9 @@
 <!-- Start of Service section
 	============================================= -->
 	<section id="bd-ser1" class="bd-ser1-sec over-hidden">
-		<div class="bd-ser1-content">
+		<div class="bd-ser1-content" data-nx-group>
 			<div class="bd-ser1-item-wrap">
-				<div class="bd-ser1-item position-relative">
+				<div class="bd-ser1-item ax_item_active position-relative">
 					<div class="item-icon-serial d-flex align-items-center justify-content-between">
 						<div class="item-icon d-flex align-items-center justify-content-center">
 							<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -338,7 +338,7 @@
 				</div>
 			</div>
 			<div class="bd-ser1-item-wrap">
-				<div class="bd-ser1-item position-relative">
+				<div class="bd-ser1-item ax_item_active active position-relative">
 					<div class="item-icon-serial d-flex align-items-center justify-content-between">
 						<div class="item-icon d-flex align-items-center justify-content-center">
 							<svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -367,7 +367,7 @@
 				</div>
 			</div>
 			<div class="bd-ser1-item-wrap">
-				<div class="bd-ser1-item position-relative">
+				<div class="bd-ser1-item ax_item_active position-relative">
 					<div class="item-icon-serial d-flex align-items-center justify-content-between">
 						<div class="item-icon d-flex align-items-center justify-content-center">
 							<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -404,7 +404,7 @@
 				</div>
 			</div>
 			<div class="bd-ser1-item-wrap">
-				<div class="bd-ser1-item position-relative">
+				<div class="bd-ser1-item ax_item_active position-relative">
 					<div class="item-icon-serial d-flex align-items-center justify-content-between">
 						<div class="item-icon d-flex align-items-center justify-content-center">	
 							<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -471,12 +471,15 @@
 						<p>We provide innovative construction solutions tailored to complex and demanding projects, combining advanced technology, expert planning, and skilled execution to ensure efficiency, safety, durability, and outstanding results that exceed client expectations.</p>
 					</div>
 				</div>
-				<div class="bd-ab1-top3 headline pera-content">
+				<div class="bd-ab1-top3 position-relative headline pera-content">
 					<div class="item-icon mb-50">
 						<img src="assets/img/icon/ic8.svg" alt="">
 					</div>
 					<p>Property Manager of The Year</p>
 					<h3>2019</h3>
+					<div class="item-fv-logo top_view">
+						<img src="assets/img/icon/ic16.svg" alt="">
+					</div>
 				</div>
 			</div>
 			<div class="bd-ab1-bottom-content mt-50" data-nx-group>
@@ -892,6 +895,12 @@
 <!-- Start of Price section
 	============================================= -->
 	<section id="bd-price1" class="bd-price1-sec over-hidden pt-100 pb-100 position-relative">
+		<div class="bd-price-shape1 top_view position-absolute">
+			<img src="assets/img/about/ps1.png" alt="">
+		</div>
+		<div class="bd-price-shape2 bottom_view position-absolute">
+			<img src="assets/img/about/ps2.png" alt="">
+		</div>
 		<div class="line_animation">
 			<div class="line_area"></div>
 			<div class="line_area"></div>
@@ -1094,15 +1103,29 @@
 						<p>Skilled professionals delivering quality construction solutions with 
 						expertise and precision</p>
 					</div>
-					<div class="bd-tm1-scroll text-center position-relative">
+					<div id="scrollBtn" class="bd-tm1-scroll text-center position-relative">
 						<span class="text-uppercase">Scroll</span>
-						<i>
-							<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M59.75 5.79199C67.2803 10.1396 73.1657 16.8506 76.4932 24.884C79.8208 32.9174 80.4046 41.8243 78.1541 50.2233C75.9036 58.6224 70.9445 66.0441 64.0461 71.3375C57.1476 76.6308 48.6953 79.5 40 79.5C31.3047 79.5 22.8524 76.6308 15.9539 71.3375C9.05548 66.0441 4.09644 58.6224 1.84593 50.2234C-0.40458 41.8243 0.179209 32.9174 3.50676 24.884C6.8343 16.8506 12.7196 10.1397 20.25 5.792" stroke="#ED5518"/>
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M40.5 31.875C40.897 31.875 41.2188 32.1968 41.2188 32.5938V48.4062C41.2188 48.8032 40.897 49.125 40.5 49.125C40.103 49.125 39.7812 48.8032 39.7812 48.4062V32.5938C39.7812 32.1968 40.103 31.875 40.5 31.875Z" fill="#ED5518"/>
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M47.477 41.4293C47.7577 41.7099 47.7577 42.165 47.477 42.4457L41.0082 48.9145C40.7276 49.1951 40.2724 49.1951 39.9918 48.9145L33.523 42.4457C33.2423 42.165 33.2423 41.7099 33.523 41.4293C33.8037 41.1486 34.2588 41.1486 34.5395 41.4293L40.5 47.3898L46.4605 41.4293C46.7412 41.1486 47.1963 41.1486 47.477 41.4293Z" fill="#ED5518"/>
+						<div class="draw-icon">
+							<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+								<path class="circle"
+								d="M59.75 5.79199C67.2803 10.1396 73.1657 16.8506 76.4932 24.884C79.8208 32.9174 80.4046 41.8243 78.1541 50.2233C75.9036 58.6224 70.9445 66.0441 64.0461 71.3375C57.1476 76.6308 48.6953 79.5 40 79.5C31.3047 79.5 22.8524 76.6308 15.9539 71.3375C9.05548 66.0441 4.09644 58.6224 1.84593 50.2234C-0.40458 41.8243 0.179209 32.9174 3.50676 24.884C6.8343 16.8506 12.7196 10.1397 20.25 5.792"
+								/>
+								<path
+								d="M40.5 31.875V49.125"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								/>
+								<path
+								d="M33.5 42L40.5 49L47.5 42"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								fill="none"
+								/>
 							</svg>
-						</i>
+						</div> 
 					</div>
 				</div>
 				<div class="bd-team1-feed">
@@ -1452,7 +1475,7 @@
 
 <!-- Start of Footer section
 	============================================= -->
-	<footer id="bd-ftr1" class="bd-ftr1-sec over-hidden pt-100">
+	<footer id="bd-ftr1" class="bd-ftr1-sec over-hidden pt-100" data-background="assets/img/bg/ftr-bg.jpg">
 		<div class="bd-ftr1-wrap over-hidden position-relative">
 			<div class="container">
 				<div class="bd-ftr1-content pb-60">
@@ -1529,15 +1552,10 @@
 			</div>
 		</div>
 		<div class="bd-ftr1-bottom-text  position-relative text-center headline">
-			<div class="text-video">
-				<video autoplay muted loop playsinline>
-					<source src="assets/img/01.mp4" type="video/mp4">
-					</video>
-					<h3 class="text-uppercase">Buildaro</h3>
-				</div>
-				<span class="bd-ftr1-shape3 position-absolute"><img src="assets/img/about/fs3.png" alt=""></span>
-			</div>
-		</footer>
+			<h3 class="text-uppercase">Buildaro</h3>
+			<span class="bd-ftr1-shape3 position-absolute"><img src="assets/img/about/fs3.png" alt=""></span>
+		</div>
+	</footer>
 <!-- End of Footer section
 	============================================= -->	
 

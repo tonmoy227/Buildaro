@@ -214,6 +214,28 @@ Last change:    00/00/00
 					});
 				}; 
 
+				if ($('.bd-hero2-slider').length > 0 ) {
+					var slider = new Swiper('.bd-hero2-slider', {
+						spaceBetween: 0,
+						slidesPerView: 1,
+						loop: true,
+						effect: "fade",
+						// autoplay: {
+						// 	delay: 4000,
+						// 	disableOnInteraction: false,
+						// },
+						pagination: {
+							el: ".bd-hr2-pagi",
+							clickable: true,
+						},
+						speed: 1000,
+						navigation: {
+							nextEl: ".bd-hr2-next",
+							prevEl: ".bd-hr2-prev",
+						},
+					});
+				}; 
+
 
 				const MXHero = gsap.timeline();
 				MXHero
@@ -504,6 +526,68 @@ Last change:    00/00/00
 			});
 		});
 	}
+
+
+
+
+
+	document.addEventListener('DOMContentLoaded', () => {
+
+		const scrollBtn = document.getElementById('scrollBtn');
+
+		if (scrollBtn) {
+
+			scrollBtn.addEventListener('click', function () {
+
+				const section =
+				this.closest('section') ||
+				this.closest('[class*="section"]') ||
+				this.parentElement;
+
+				const sectionBottom =
+				section.offsetTop + section.offsetHeight - 600;
+
+				smoothScrollTo(sectionBottom, 2000);
+
+			});
+
+		}
+
+		function smoothScrollTo(targetY, duration) {
+
+			const startY = window.scrollY;
+			const distance = targetY - startY;
+			let startTime = null;
+
+			function easeInOut(t) {
+				return t < 0.5
+				? 2 * t * t
+				: -1 + (4 - 2 * t) * t;
+			}
+
+			function step(currentTime) {
+
+				if (!startTime) startTime = currentTime;
+
+				const elapsed = currentTime - startTime;
+				const progress = Math.min(elapsed / duration, 1);
+
+				window.scrollTo(
+					0,
+					startY + distance * easeInOut(progress)
+					);
+
+				if (elapsed < duration) {
+					requestAnimationFrame(step);
+				}
+
+			}
+
+			requestAnimationFrame(step);
+
+		}
+
+	});
 
 
 })(jQuery);

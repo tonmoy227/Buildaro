@@ -368,4 +368,229 @@
 			}
 		}
 	}
+	&:is(.header_style_two) {
+		background-color: #fff;
+		.brand-logo {
+			width: 296px;
+			height: 154px;
+			@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+				width: 200px;
+			}
+			@media #{$md,$sm,$xs,$xxs} {
+				height: 70px;
+			}
+			a {
+				width: 100%;
+				height: 100%;
+				padding: 15px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		.bd-mobile-menu-btn button span {
+			background-color: var(--bd-title-color);
+		}
+		.bd-header-content {
+			width: 85%;
+			@media #{$md,$sm,$xs,$xxs} {
+				padding-right: 15px;
+			}
+			.bd-header-top {
+				gap: 20px;
+				padding-left: 40px;
+				padding-right: 40px;
+				background-color: #EDEFED;
+				@media #{$xl} {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+				@media #{$lg} {
+					padding: 16px 20px;
+				}
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none !important;
+				}
+				.top-cta-wrap {
+					gap: 40px;
+					@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+						gap: 20px;
+					}
+					.cta-item {
+						gap: 12px;
+						.item-icon {
+							width: 36px;
+							height: 36px;
+							transition: all 500ms ease-in-out;
+							background-color: var(--bd-title-color);
+						}
+						.item-text {
+							span,a {
+								display: block;
+								font-weight: 500;
+							}
+							span {
+								line-height: 1;
+								font-size: 17px;
+								padding-bottom: 6px;
+								color: var(--bd-title-color);
+								font-family: var(--bd-heading);
+							}
+							a {
+								line-height: 1;
+								font-size: 15px;
+							}
+						}
+						&:hover {
+							.item-icon {
+								background-color: var(--bd-prime-c);
+							}
+						}
+					}
+				}
+
+				.top-social-btn {
+					gap: 60px;
+					@media #{$xl} {
+						gap: 20px;
+					}
+					.top-btn {
+						gap: 12px;
+						height: 76px;
+						padding: 0px 32px;
+						background-color: var(--bd-prime-c);
+						@media #{$lg,$md,$sm,$xs,$xxs} {
+							display: none !important;
+						}
+						.item-icon {
+							width: 36px;
+							height: 36px;
+							background-color: #fff;
+						}
+						.item-text {
+							span,a {
+								color: #fff;
+								display: block;
+								line-height: 1.2;
+							}
+							span {
+								font-size: 18px;
+								font-family: var(--bd-heading);
+							}
+							a {
+								font-size: 15px;
+							}
+						}
+					}
+					.top-social {
+						gap: 8px;
+						display: flex;
+						a {
+							color: #fff;
+							width: 42px;
+							height: 42px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							transition: all 300ms ease-in-out;
+							background-color: var(--bd-title-color);
+
+							&:hover {  
+								background-color: var(--bd-prime-c);
+								animation: shake .5s ease-in-out infinite;
+							}
+						}
+					}
+				}
+			}
+			.bd-header-navigation {
+				padding-left: 20px;
+				background-color: var(--bd-title-color);
+				@media #{$md,$sm,$xs,$xxs} {
+					justify-content: end !important;
+					background-color: transparent;
+				}
+			}
+			.main-navigation {
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none;
+				}
+				li {
+					margin: 0px 20px;
+					@media #{$xl,$lg} {
+						margin: 0px 8px;
+					}
+					&:is(.dropdown) {
+						&:after {
+							font-size: 14px;
+							content: '\f103';
+						}
+					}
+					.dropdown-menu {
+						top: 52px;
+					}
+					a {
+						color: #fff;
+						opacity: .8;
+						font-size: 16px;
+						display: inline;
+						padding-bottom: 30px;
+						text-transform: uppercase;
+						&:hover {
+							opacity: 1;
+						}
+					}
+				}
+			}
+			.header-cta {
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none !important;
+				}
+				button {
+					padding: 0;
+					border: none;
+					background-color: transparent;
+					&:hover {
+						animation: shake .5s ease-in-out infinite;
+					}
+				}
+				.search-btn {
+					width: 78px;
+					height: 78px;
+					background-color: #fff;
+					@media #{$lg} {
+						width: 40px;
+					}
+				}
+				.cta-btn {
+					a {
+						gap: 16px;
+						z-index: 1;
+						color: #fff;
+						height: 78px;
+						overflow: hidden;
+						padding: 0px 30px;
+						position: relative;
+						text-transform: uppercase;
+						font-family: var(--bd-heading);
+						background-color: var(--bd-prime-c);
+						span {
+							white-space: nowrap;
+						}
+					}
+					@media #{$lg,$md,$sm,$xs,$xxs} {
+						display: none;
+					}
+				}
+				.ofcanvas-btn {
+					width: 78px;
+					height: 78px;
+					background-color: #fff;
+					@media #{$lg} {
+						width: 40px;
+					}
+				}
+			}
+		}
+	}
 }

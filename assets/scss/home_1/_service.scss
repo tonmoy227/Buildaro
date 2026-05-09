@@ -125,7 +125,7 @@
 			}
 		}
 	}
-	&:hover {
+	&:is(.active) {
 		background-color: #191919;
 		&:before {
 			opacity: 1;

@@ -32,6 +32,10 @@
 
 .bd-hero1-text {
 	max-width: 760px;
+	margin-left: 50px;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 0;
+	}
 	.hero-slug {
 		font-size: 18px;
 		font-weight: 500;
@@ -234,6 +238,9 @@
 	position: absolute;
 	padding: 18px 0px 15px;
 	background-color: var(--bd-prime-c);
+	&:is(.ver_2) {
+		background-color: var(--bd-title-color);
+	}
 	h3 {
 		color: #fff;
 		font-size: 28px;
