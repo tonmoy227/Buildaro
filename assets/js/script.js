@@ -91,6 +91,16 @@ Last change:    00/00/00
 		startVisible:true,
 	});
 
+	$('.marquee-left').marquee({
+		gap: 0,
+		speed: 80,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: false,
+		startVisible:true,
+	});
+
 	// Background Image
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
@@ -588,6 +598,42 @@ Last change:    00/00/00
 		}
 
 	});
+
+
+	if ($('.bd-pro2-slider').length > 0 ) {
+		var slider = new Swiper('.bd-pro2-slider', {
+			spaceBetween: 24,
+			slidesPerView: 3,
+			loop: true,
+			speed: 1000,
+			centeredSlides: true,
+			navigation: {
+				nextEl: ".bd-pro2-right",
+				prevEl: ".bd-pro2-left",
+			},
+			breakpoints: {
+				'1400': {
+					slidesPerView: 3,
+				},
+				'1200': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'576': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				'480': {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				'0': {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+			},
+		});
+	};
 
 
 })(jQuery);

@@ -1,0 +1,20 @@
+.bd-blog2-top {
+	.bd-sec-title {
+		max-width: 700px;
+	}
+	.item-desc { 
+		max-width: 438px;
+	}
+}
+
+.bd-blog2-featured {
+	max-width: 756px;
+	.item-meta {
+		i {
+			width: 100%;
+		}
+		.blg_date {
+			white-space: nowrap;
+		}
+	}
+}

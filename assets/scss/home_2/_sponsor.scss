@@ -1,0 +1,15 @@
+.bd-wc-sponsor-marquee {
+	display: flow-root;
+	border: 1px solid #EDEFED;
+}
+.bd-wc-spn-img {
+	display: inline-block;
+	border-right: 1px solid #EDEFED;
+	.item-img {
+		height: 95px;
+		display: flex;
+		padding: 0px 35px;
+		align-items: center;
+		justify-content: center;
+	}
+}

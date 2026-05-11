@@ -1,0 +1,228 @@
+.bd-faq2-wrapper {
+	display: flex;
+	gap:  40px 24px;
+	justify-content: space-between;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.bd-faq2-team-area {
+	width: 100%;
+	max-width: 636px;
+	
+}
+.bd-faq2-team {
+	gap: 30px 12px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	@media #{$xxs} {
+		max-width: 312px;
+		margin: 0 auto;
+		grid-template-columns: 1fr;
+	}
+}
+
+.bd-team2-item {
+	.item-img {
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 22px;
+		&:before {
+			right: 20px;
+			bottom: -60px;
+			width: 8px;
+			content: '';
+			height: 200px;
+			position: absolute;
+			background-color: #fff;
+			transform: rotate(45deg);
+		}
+		span {
+			right: 0;
+			bottom: 0;
+			width: 60px;
+			height: 60px;
+			display: flex;
+			padding-top: 17px;
+			padding-left: 22px;
+			position: absolute;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--bd-prime-c);
+			clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+	.item-text {
+		h3 {
+			line-height: 1;
+			font-size: 20px;
+			font-weight: 500;
+			padding-left: 16px;
+			position: relative;
+			padding-bottom: 5px;
+			&:before {
+				left: 0;
+				top: 5px;
+				width: 8px;
+				height: 8px;
+				content: '';
+				position: absolute;
+				background-color: var(--bd-prime-c);
+			}
+		}
+		span {
+			color: #474747;
+			font-size: 15px;
+		}
+	}
+}
+
+.bd-faq2-cta {
+	h3 {
+		color: #000000;
+		max-width: 295px;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.2;
+		margin-bottom: 22px;
+		a {
+			display: inline;
+		}
+	}
+	.get_touch {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 10px 10px 10px 20px;
+		justify-content: space-between;
+		background-color: var(--bd-title-color);
+		span {
+			color: #fff;
+			font-size: 20px;
+			font-weight: 500;
+			font-family: var(--bd-heading);
+		}
+		i {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--bd-prime-c);
+			img {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+.bd-faq2-accordion-area {
+	width: 100%;
+	max-width: 900px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin: 0 auto;
+		max-width: 636px;
+	}
+}
+
+.bd-faq2-accordion {
+	margin: 0 auto;
+	margin-top: 50px;
+	.accordion-item,
+	.accordion-button {
+		background-color: transparent;
+		transition: all 200ms ease-in-out;
+	}
+	.accordion-item {
+		border: none;
+		padding: 20px;
+		position: relative;
+		border-radius: 0px;
+		margin-bottom: 12px;
+		background-color: #F4F4F4;
+		transition: all 200ms ease-in-out;
+		&:last-child {
+			border-bottom: none;
+		}
+		@media #{$xxs} { 
+			padding: 23px 15px 23px 15px;
+		}
+	}
+	.accordion-button {
+		padding: 0;
+		border: none;
+		color: #000000;
+		font-size: 20px;
+		font-weight: 500;
+		margin: 0 auto;
+		line-height: 1;
+		position: relative;
+		font-family: var(--bd-heading);
+		@media #{$md,$sm,$xs,$xxs} {
+			padding: 20px 15px;
+		}
+		span {
+			max-width: 85%;
+			display: inline-block;
+			b {
+				color: #5B5B5B;
+				font-weight: 500;
+				margin-right: 20px;
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	.accordion-button:focus {
+		box-shadow: none;
+	}
+	.accordion-body {
+		padding: 0;
+		color: #5B5B5B;
+		font-size: 16px;
+		transition: all 500ms ease-in-out;
+		.bi-faq-text {
+			max-width: 775px;
+			padding: 15px 30px 0px 55px;
+			@media #{$xxs} {
+				padding-left: 0;
+			}
+		}
+		@media #{$md,$sm,$xs,$xxs} {
+			padding: 20px 15px;
+		}
+	}
+	.accordion-button::after {
+		top: 0px;
+		right: 00px;
+		opacity: .7;
+		display: flex;
+		font-size: 16px;
+		content: '\2b';
+		font-weight: 900;
+		position: absolute;
+		border-radius: 100%;
+		align-items: center;
+		background-image: none;
+		justify-content: center;
+		color: var(--mx-prime-c2);
+		font-family: 'Font Awesome 6 free';
+		@media #{$xxs} {
+			right: 0px;
+		}
+	}
+	.accordion-button:not(.collapsed) { 
+		color: #000000;
+		box-shadow: none;
+		span {
+			color: #000000;
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+}
