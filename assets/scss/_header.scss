@@ -481,6 +481,11 @@
 								font-size: 15px;
 							}
 						}
+						&:hover {
+							.item-icon {
+								animation: shake 0.5s ease-in-out infinite;
+							}
+						}
 					}
 					.top-social {
 						gap: 8px;

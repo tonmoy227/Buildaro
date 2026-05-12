@@ -1,8 +1,54 @@
+@keyframes grow {
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
 .bd-feat2-sec {
 	.bd-feat2-shape {
 		left: 0;
 		right: 0;
 		bottom: -5px;
+	}
+	.bd-feat2-shape1 {
+		top: 0;
+		left: 0;
+		.box {
+			transform: scaleY(0);
+			animation: grow 3s ease infinite;
+		}
+		.box1 {
+			animation-delay: 0s;
+		}
+
+		.box2 {
+			animation-delay: .5s;
+		}
+
+		.box3 {
+			animation-delay: 1s;
+		}
+	}
+	.bd-feat2-shape2 {
+		right: 0;
+		bottom: 0;
+		.box {
+			transform: scaleY(0);
+			animation: grow 3s ease infinite;
+		}
+		.box1 {
+			animation-delay: 0s;
+		}
+
+		.box2 {
+			animation-delay: 0.3s;
+		}
+
+		.box3 {
+			animation-delay: 0.6s;
+		}
 	}
 }
 .bd-feat2-content {
@@ -54,6 +100,7 @@
 				bottom: -1px;
 				margin: 0 auto;
 				position: absolute;
+				transition: 700ms var(--cube-2);
 				background-color: var(--bd-prime-c);
 			}
 		}
@@ -65,6 +112,12 @@
 		.item-inner-area {
 			.item-icon {
 				background-color: var(--bd-prime-c);
+				transform: scale(-1) rotate(180deg);
+			}
+			h3 {
+				&:before {
+					width: 100px;
+				}
 			}
 		}
 	}

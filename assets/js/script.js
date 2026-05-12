@@ -57,6 +57,19 @@ Last change:    00/00/00
 		});
 	}
 	TXTheaderSticky();
+
+
+	if($('.bd-split-1').length) {
+		var txtSplit = $('.bd-split-1');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "words",
+				wordsClass: "split-word"
+			});
+		});
+	}
+
+
 	jQuery(window).on('scroll', function() {
 		if (jQuery(window).scrollTop() > 250) {
 			jQuery('.ag-header-section.header_style_three, .ag-header-section.header_style_four').addClass('sticky-on')
