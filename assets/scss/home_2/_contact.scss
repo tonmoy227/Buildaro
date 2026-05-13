@@ -229,11 +229,7 @@
 			transition: all 500ms ease-in-out;
 			background-color: var(--bd-title-color);
 			&:hover {
-				color: #fff;
-				background-color: var(--bd-prime-c);
-				i {
-					background-color: var(--bd-title-color);
-				}
+				letter-spacing: 1px;
 			}
 			i {
 				width: 44px;

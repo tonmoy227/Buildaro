@@ -90,6 +90,7 @@
 			margin-bottom: 20px;
 			position: relative;
 			padding-bottom: 20px;
+			transition: all 500ms ease-in-out;
 			border-bottom:  1px solid #CCCCCC99;
 			&:before {
 				left: 0;
@@ -115,6 +116,7 @@
 				transform: scale(-1) rotate(180deg);
 			}
 			h3 {
+				letter-spacing: 1px;
 				&:before {
 					width: 100px;
 				}

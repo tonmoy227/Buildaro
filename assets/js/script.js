@@ -106,7 +106,7 @@ Last change:    00/00/00
 
 	$('.marquee-left').marquee({
 		gap: 0,
-		speed: 80,
+		speed: 50,
 		delayBeforeStart: 0,
 		direction: 'right',
 		duplicated: true,
@@ -349,6 +349,25 @@ Last change:    00/00/00
 			yPercent: 200,
 			ease: "Power2.out",
 			duration: 1,
+			stagger: .2,
+		})
+	}
+
+	if (window.matchMedia("(min-width: 1200px)").matches) {
+		var collab3 = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".bd-indust-content",
+				start: "top 95%",
+				toggleActions: "play reverse play reverse",
+				markers: false,
+			},
+		})
+		collab3
+		.from(".bd-indust-content li", {
+			opacity: 0,
+			yPercent: 100,
+			ease: "elastic.out(1,0.5)",
+			duration: 2,
 			stagger: .2,
 		})
 	}
@@ -613,6 +632,12 @@ Last change:    00/00/00
 	});
 
 
+	$('.counter').counterUp({
+		delay: 10,
+		time: 5000
+	});
+
+
 	if ($('.bd-pro2-slider').length > 0 ) {
 		var slider = new Swiper('.bd-pro2-slider', {
 			spaceBetween: 24,
@@ -648,5 +673,73 @@ Last change:    00/00/00
 		});
 	};
 
+
+	const buttons = document.querySelectorAll(".bd-ftr2-social li a ");
+	buttons.forEach(btn => {
+		const split = new SplitText(btn, { type: "chars" });
+		gsap.set(split.chars, { y: 0, opacity: 1 });
+		btn.addEventListener("mouseenter", () => {
+			gsap.fromTo(
+				split.chars,
+				{ x: 20, rotate: 180, opacity: 0 },
+				{
+					x: 0,
+					opacity: 1,
+					duration: 0.4,
+					rotate: 0,
+					stagger: 0.1,
+					ease: "power3.out"
+				}
+				);
+		});
+	});
+
+	$('.bd-ftr2-newslatter .item-text a').on("click", function()  {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	}); 
+
+
+	if($(".ftr_bottom-text").length) {
+		var aniTitle1 = $(".ftr_bottom-text");
+		if(aniTitle1.length == 0) return; gsap.registerPlugin(SplitText); aniTitle1.each(function(index, el) {
+
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+
+			gsap.set(el, { perspective: 400 });
+
+
+			if( $(el).hasClass('ftr_bottom-text_2') ){
+				gsap.set(el.split.chars, {
+					yPercent: 100,
+					opacity: 0,
+
+				});
+			}
+
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+					toggleActions: "play reverse play reverse",
+					markers: false,
+
+				},
+
+				yPercent: 0,
+				xPercent: 0,
+				opacity: 1,
+				duration: 2,
+				stagger: .1,
+				ease: "bounce.out",
+			});
+
+		});
+	}
 
 })(jQuery);

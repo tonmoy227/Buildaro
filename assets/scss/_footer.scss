@@ -316,6 +316,7 @@
 				position: absolute;
 				align-items: center;
 				padding: 8px 8px 8px 20px;
+				transition: all 500ms ease-in-out;
 				justify-content: space-between;
 				background-color: var(--bd-prime-c);
 				@media #{$md,$sm,$xs,$xxs} {
@@ -328,8 +329,15 @@
 					align-items: center;
 					justify-content: center;
 					background-color: #000000;
+					transition: all 500ms ease-in-out;
 					img {
 						transform: rotate(45deg);
+					}
+				}
+				&:hover {
+					letter-spacing: 1px;
+					i {
+						transform: scale(-1) rotate(180deg);
 					}
 				}
 			}
@@ -407,7 +415,7 @@
 	font-size: 340px;
 	font-weight: 600;
 	letter-spacing: -5px;
-	margin-bottom: -120px;
+	margin-bottom: -110px;
 	font-family: var(--bd-heading);
 }
 

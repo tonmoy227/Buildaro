@@ -33,11 +33,15 @@
 			right: 20px;
 			bottom: -60px;
 			width: 8px;
+			z-index: 1;
 			content: '';
 			height: 200px;
 			position: absolute;
 			background-color: #fff;
 			transform: rotate(45deg);
+		}
+		img {
+			transition: all 500ms ease-in-out;
 		}
 		span {
 			right: 0;
@@ -50,6 +54,7 @@
 			position: absolute;
 			align-items: center;
 			justify-content: center;
+			transition: all 500ms ease-in-out;
 			background-color: var(--bd-prime-c);
 			clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
 		}
@@ -77,6 +82,16 @@
 			font-size: 15px;
 		}
 	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.1);
+			}
+			span {
+				background-color: var(--bd-title-color);
+			}
+		}
+	}
 }
 
 .bd-faq2-cta {
@@ -89,6 +104,9 @@
 		margin-bottom: 22px;
 		a {
 			display: inline;
+			&:hover {
+				color: var(--bd-prime-c);
+			}
 		}
 	}
 	.get_touch {
@@ -111,8 +129,16 @@
 			align-items: center;
 			justify-content: center;
 			background-color: var(--bd-prime-c);
+			transition: all 400ms ease-in-out;
 			img {
 				transform: rotate(45deg);
+			}
+		}
+		&:hover {
+			letter-spacing: 1px;
+			background-color: var(--bd-prime-c);
+			i {
+				background-color: var(--bd-title-color);
 			}
 		}
 	}

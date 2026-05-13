@@ -45,6 +45,7 @@
 		margin-bottom: 45px;
 		align-items: center;
 		justify-content: center;
+		transition: all 400ms ease-in-out;
 		background-color: var(--bd-title-color);
 	}
 	.item-text {
@@ -58,6 +59,12 @@
 			color: #5B5B5B;
 			text-transform: uppercase;
 			font-family: var(--bd-heading);
+		}
+	}
+	&:hover {
+		.item-icon {
+			background-color: var(--bd-prime-c);
+			animation: icon-bounce 0.8s ease-out infinite;
 		}
 	}
 }
