@@ -191,8 +191,28 @@
 		a {
 			margin-left: 5px;
 			color: var(--bd-prime-c);
+			span {
+				position: relative;
+				&:before {
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: 1px;
+					content: '';
+					width: 0%;
+					margin: 0 auto;
+					position: absolute;
+					transition: all 500ms ease-in-out;
+					background-color: var(--bd-prime-c);
+				}
+			}
 			&:hover {
 				letter-spacing: 1px;
+				span {
+					&:before {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

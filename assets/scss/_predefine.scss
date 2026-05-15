@@ -345,6 +345,9 @@ a {
 		padding: 7px 12px 6px 17px;
 		font-family: var(--bd-heading);
 		background-color: var(--bd-title-color);
+		&:is(.ver_2) {
+			background-color: #303030;
+		}
 		&:before {
 			top: 0;
 			left: 0;

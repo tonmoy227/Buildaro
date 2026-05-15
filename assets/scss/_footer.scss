@@ -175,6 +175,9 @@
 	.bd-ftr1-shape3 {
 		left: 0;
 		bottom: 0;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
 	}
 
 	h3 {
@@ -188,6 +191,13 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		color: transparent;
+	}
+}
+
+.bd-ftr2-sec {
+	.bd-ftr2-shape {
+		right: 0;
+		bottom: 0;
 	}
 }
 

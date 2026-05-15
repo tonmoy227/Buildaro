@@ -1,0 +1,155 @@
+.bd-ser3-sec {
+	z-index: 1;
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		content: '';
+		height: 548px;
+		position: absolute;
+		background-color: #000000;
+	}
+	.bd-ser3-bg {
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		opacity: .5;
+		height: 823px;
+	}
+	.bd-ser3-el {
+		left: 0;
+		bottom: 0;
+	}
+	.bd-sec-title {
+		margin: 0 auto;
+		max-width: 780px;
+		.sec_title,p {
+			color: #fff;
+		}
+	}
+}
+
+.bd-ser3-content {
+	gap: 24px;
+	display: grid;
+	margin: 0 auto;
+	margin-top: 45px;
+	max-width: 1296px;
+	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$md,$sm,$xs,$xxs} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$xs,$xxs} {
+		grid-template-columns:  1fr;
+	}
+}
+
+.bd-ser3-item {
+	padding: 32px;
+	background-color: #EFEFEF;
+	.item-icon {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto; 
+		margin-bottom: 40px;
+		background-color: var(--bd-title-color);
+	}
+	.item-text {
+		h3 {
+			color: #0D0D0D;
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 1.2;
+			margin-bottom: 22px;
+			position: relative;
+			padding-bottom: 22px;
+			transition: all 500ms ease-in-out;
+			border-bottom:  1px solid #CCCCCC99;
+			&:before {
+				left: 0;
+				right: 0;
+				height: 3px;
+				width: 60px;
+				content: '';
+				bottom: -1px;
+				margin: 0 auto;
+				position: absolute;
+				transition: 700ms var(--cube-2);
+				background-color: var(--bd-prime-c);
+			}
+		}
+		p {
+			margin: 0 auto;
+			max-width: 352px;
+			padding-bottom: 40px;
+		}
+		.read_more {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			background-color: #D3D3D3;
+			padding: 8px 8px 8px 20px;
+			transition: all 500ms ease-in-out;
+			justify-content: space-between;
+			span {
+				color: var(--bd-title-color);
+				font-family: var(--bd-heading);
+				transition: all 500ms ease-in-out;
+			}
+			i {
+				width: 40px;
+				height: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all 500ms ease-in-out;
+				background-color: var(--bd-title-color);
+				img {
+					transform: rotate(45deg);
+				}
+			}
+			&:hover {
+				background-color: var(--bd-title-color);
+				span {
+					color: #fff;
+				}
+				i {
+					background-color: var(--bd-prime-c);
+				}
+			}
+		}
+	}
+}
+
+.bd-ser3-btm {
+	p {
+		a {
+			margin-left: 5px;
+			color: var(--bd-prime-c);
+			span {
+				position: relative;
+				&:before {
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: 1px;
+					content: '';
+					width: 0%;
+					margin: 0 auto;
+					position: absolute;
+					transition: all 500ms ease-in-out;
+					background-color: var(--bd-prime-c);
+				}
+			}
+			&:hover {
+				letter-spacing: 1px;
+				span {
+					&:before {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -196,13 +196,16 @@
 		align-items: center;
 		justify-content: center;
 		background-color: #5B5B5B;
+		transition: all 500ms ease-in-out;
 		svg {
 			z-index: 2;
 			position: relative;
 		}
+		&:is(.active) {
+			background-color: var(--bd-prime-c);
+		}
 	}
 	.bd-hr2-prev {
-		background-color: var(--bd-prime-c);
 		svg {
 			transform: rotate(-180deg);
 		}

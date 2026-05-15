@@ -375,7 +375,7 @@ Last change:    00/00/00
 
 	var AXC = gsap.timeline({
 		scrollTrigger: {
-			trigger: ".bd-ab1-top-content",
+			trigger: ".bd-ab1-top1",
 			start: "top 90%",
 			toggleActions: "play reverse play reverse",
 			markers: false,
@@ -741,5 +741,24 @@ Last change:    00/00/00
 
 		});
 	}
+
+
+	if ($('.bd-ab3-slider').length > 0 ) {
+		var slider = new Swiper('.bd-ab3-slider', {
+			spaceBetween: 0,
+			slidesPerView: 1,
+			loop: true,
+			effect: "fade",
+			speed: 1000,
+			pagination: {
+				el: ".bd-ab3-pagi",
+				clickable: true,
+			}, 
+		});
+	};
+
+
+
+
 
 })(jQuery);
