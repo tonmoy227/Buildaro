@@ -758,7 +758,13 @@ Last change:    00/00/00
 	};
 
 
-
+	document.querySelectorAll('.bd-step3-item').forEach((item, index) => {
+		item.addEventListener('mouseenter', () => {
+			document.querySelectorAll('.bd-step3-img').forEach(img => img.classList.remove('active'));
+			const imgs = document.querySelectorAll('.bd-step3-img');
+			if (imgs[index]) imgs[index].classList.add('active');
+		});
+	});
 
 
 })(jQuery);

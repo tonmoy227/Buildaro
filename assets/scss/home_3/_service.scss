@@ -20,6 +20,10 @@
 	.bd-ser3-el {
 		left: 0;
 		bottom: 0;
+		z-index: -1;
+		@media #{$xs,$xxs} {
+			display: none;
+		}
 	}
 	.bd-sec-title {
 		margin: 0 auto;

@@ -1,0 +1,38 @@
+.bd-work3-sec {
+	.bd-sec-title {
+		margin: 0 auto;
+		max-width: 650px;
+	}
+}
+
+.bd-work3-btn {
+	.nav-tabs {
+		padding-bottom: 25px;
+		display: inline-block;
+		border-bottom:  1px solid #5B5B5B33;
+		.nav-link {
+			font-size: 18px;
+			margin: 0px 22px;
+			position: relative;
+			padding: 0 !important;
+			color: var(--bd-body-color);
+			&:before {
+				left: 0;
+				right: 0;
+				width: 0%;
+				content: '';
+				height: 3px;
+				bottom: -27px;
+				margin: 0 auto;
+				position: absolute;
+				transition: all 500ms ease-in-out;
+				background-color: var(--bd-prime-c);
+			}
+			&:is(.active) {
+				&:before {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
