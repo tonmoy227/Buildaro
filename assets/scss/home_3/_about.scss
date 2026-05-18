@@ -168,5 +168,25 @@
 	}
 }
 
-
+.bd-hero-text-marquee {
+	&:is(.ver_3) {
+		z-index: 1;
+		padding: 45px 0px;
+		position: relative;
+		&:after {
+			top: 0;
+			left: 0;
+			width: 110%;
+			z-index: -1;
+			content: "";
+			height: 100%;
+			transform: rotate(-2deg);
+			position: absolute;
+			background-color: #EDEFED;
+		}
+		h3 {
+			color: var(--bd-title-color);
+		}
+	}
+}
 

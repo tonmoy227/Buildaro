@@ -1,10 +1,22 @@
 .bd-price1-sec {
 	z-index: 1;
 	background-color: #191919;
+	&:is(.ver_2) {
+		&:before {
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			content: "";
+			position: absolute;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.72) 100%);
+		}
+	}
 	.bd-price-shape1 {
 		top: 0;
 		z-index: 1;
-		left: 85px;
+		left: 20px;
 		@media #{$lg,$md,$sm,$xs,$xxs} {
 			display: none;
 		}
@@ -102,6 +114,11 @@
 	}
 	@media #{$sm,$xs,$xxs} {
 		grid-template-columns: 1fr;
+	}
+	&:is(.ver_2) {
+		margin: 0 auto;
+		margin-top: 50px;
+		max-width: 1344px;
 	}
 }
 
@@ -225,9 +242,35 @@
 			}
 		}
 	}
+	&:is(.ver_2) {
+		.item-list-btn {
+			.item-btn {
+				a {
+					background-color: #fff;
+					span {
+						color: var(--bd-title-color);
+					}
+				}
+			}
+		}
+		&:is(.popular) {
+			.item-list-btn {
+				background-color: var(--bd-prime-c);
+				.item-btn {
+					a {
+						border: 1px solid var(--bd-title-color);
+						background-color: var(--bd-title-color);
+						span {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
 	&:is(.popular) {
+		background-color: var(--bd-prime-c);
 		.item-top {
-			background-color: var(--bd-prime-c);
 			.item-title {
 				p {
 					color: #FFFFFF;

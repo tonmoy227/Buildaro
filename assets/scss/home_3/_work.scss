@@ -1,13 +1,24 @@
 .bd-work3-sec {
+	z-index: 1;
 	.bd-sec-title {
 		margin: 0 auto;
 		max-width: 650px;
+	}
+	&:before {
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		width: 100%;
+		content: '';
+		height: 297px;
+		position: absolute;
+		background-color: var(--bd-title-color);
 	}
 }
 
 .bd-work3-btn {
 	.nav-tabs {
-		padding-bottom: 25px;
+		padding-bottom: 20px;
 		display: inline-block;
 		border-bottom:  1px solid #5B5B5B33;
 		.nav-link {
@@ -22,7 +33,7 @@
 				width: 0%;
 				content: '';
 				height: 3px;
-				bottom: -27px;
+				bottom: -22px;
 				margin: 0 auto;
 				position: absolute;
 				transition: all 500ms ease-in-out;
@@ -34,5 +45,122 @@
 				}
 			}
 		}
+	}
+}
+
+.bd-work3-slider {
+	width: 165%;
+	margin-left: -34%;
+}
+
+.bd-work3-item {
+	max-width: 1033px;
+	padding-bottom: 75px;
+	.item-img-view {
+		.item-view {
+			top: 60%;
+			left: 0;
+			right: 0;
+			width: 72px;
+			opacity: 0;
+			height: 72px;
+			margin: 0 auto;
+			overflow: hidden;
+			position: absolute;
+			visibility: hidden;
+			border-radius: 100%;
+			transform: translateY(-50%);
+			transition: all 500ms ease-in-out;
+			a {
+				color: #fff;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				font-size: 25px;
+				align-items: center;
+				justify-content: center;
+				background-color: var(--bd-prime-c);
+			}
+		}
+	}
+	.item-text {
+		left: 0;
+		right: 0;
+		opacity: 0;
+		width: 100%;
+		bottom: 50px;
+		margin: 0 auto;
+		max-width: 633px;
+		visibility: hidden;
+		padding: 40px 15px;
+		position: absolute;
+		transition: all 500ms ease-in-out;
+		background-color: var(--bd-title-color);
+		.item-tag {
+			gap: 6px;
+			display: flex;
+			justify-content: center;
+			a {
+				color: #fff;
+				font-size: 15px;
+				padding: 5px 10px;
+				background-color: #464646;
+			}
+		}
+		h3 {
+			color: #fff;
+			font-size: 32px;
+			margin-top: 20px;
+			line-height: 1.1;
+			font-weight: 500;
+		}
+	}
+}
+
+.swiper-slide-active {
+	.bd-work3-item {
+		.item-img-view {
+			.item-view {
+				top: 50%;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		.item-text {
+			bottom: 0;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.bd-work3-btm {
+	z-index: 2;
+	margin-top: -30px;
+	position: relative;
+}
+
+.bd-work3-nav {
+	gap: 8px;
+	.bd-wrk-prev,
+	.bd-wrk-next {
+		width: 52px;
+		height: 52px;
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		background-color: #fff;
+		justify-content: center;
+	}
+}
+
+.bd-work3-pagi {
+	width: auto !important;
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		border-radius: 0;
+		margin: 0 5px !important;
+		background-color: #DDDDDD;
 	}
 }
